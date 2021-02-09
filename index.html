@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Navigation UI</title>
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Vue Navigation UI">
+    <meta name="description" content="A ready made customized styled navigation bar, for the vuejs ( latest realeases )">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://metatags.io/">
+    <meta property="og:title" content="Vue Navigation UI">
+    <meta property="og:description" content="A ready made customized styled navigation bar, for the vuejs ( latest realeases )">
+    <meta property="og:image" content="https://res.cloudinary.com/devdaniel/image/upload/v1612899979/Frame_12_xohomk.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://metatags.io/">
+    <meta property="twitter:title" content="Vue Navigation UI">
+    <meta property="twitter:description" content="A ready made customized styled navigation bar, for the vuejs ( latest realeases )">
+    <meta property="twitter:image" content="https://res.cloudinary.com/devdaniel/image/upload/v1612899979/Frame_12_xohomk.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+        <div class="container">
+            <div class="nav">
+            <img class="logo" src="./img/logo.svg" alt="">
+              <div class="links">
+                <a class="link" href="https://github.com/dhanielcodes">Developer</a>
+                <a class="link" href="https://github.com/dhanielcodes/vue-nav-ui">Github-Repo</a>
+                <a class="linkBtn" href="https://www.npmjs.com/package/vue-nav-ui">
+                <button>
+                    <p>NPM</p>
+                    <img src="./img/link.svg" alt="" srcset="">
+                </button>
+                </a>
+              </div>
+              <div class="toggle">
+                <svg
+                  width="28"
+                  height="28"
+                  viewBox="0 0 28 28"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    x="28"
+                    y="12"
+                    width="4"
+                    height="28"
+                    rx="2"
+                    transform="rotate(90 28 12)"
+                    fill="black"
+                  />
+                  <rect
+                    x="16"
+                    y="28"
+                    width="4"
+                    height="28"
+                    rx="2"
+                    transform="rotate(-180 16 28)"
+                    fill="black"
+                  />
+                </svg>
+              </div>
+              <a class="navBtn" href="https://www.npmjs.com/package/vue-nav-ui">
+                <button>
+                    <p>NPM</p>
+                    <img src="./img/link.svg" alt="" srcset="">
+                </button>
+              </a>
+            </div>
+          </div>
+          <div class="main" style="text-align: center; margin-top: 10px;">
+              <img style="width: 240px;" src="./img/hero.svg" alt="">
+              <h1 style="margin: 20px;">Vuejs Navigation UI</h1>
+              <p style="color: #6D6D6D;">Compatible with the new realease from vue</p>
+
+              <div style="display: flex; justify-content: space-between; width: 450px; margin: auto; margin-top: 20px;">
+                <div class="npm" style="padding: 20px; color: #6D6D6D;  background: #FAFAFA; border-radius: 10px;">
+                    <p>npm install vue-nav-ui</p>
+                </div>
+                <div class="yarn" style="padding: 20px; color: #6D6D6D;  background: #FAFAFA; border-radius: 10px;">
+                    <p>yarn add vue-nav-ui</p>
+                </div>
+              </div>
+              <a href="https://github.com/dhanielcodes/vue-nav-ui#vue-navigation-ui">
+                <button style="margin: auto; margin-top: 20px;">
+                    <p>Easy use</p>
+                    <img src="./img/link.svg" alt="" srcset="">
+                </button>
+              </a>
+          </div>
+          
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js" integrity="sha512-1dalHDkG9EtcOmCnoCjiwQ/HEB5SDNqw8d4G2MKoNwjiwMNeBAkudsBCmSlMnXdsH8Bm0mOd3tl/6nL5y0bMaQ==" crossorigin="anonymous"></script>
+    <script>
+        const burger = document.querySelector('.toggle')
+        const nav = document.querySelector('.links')
+
+        burger.addEventListener('click', () => {
+            burger.classList.toggle('open')
+            nav.classList.toggle('open')
+        })
+
+        gsap.from('.main',1, {
+          delay: 1.5,
+          opacity: 0,
+          transform: 'translateY(20px)',
+          ease: 'expo'
+        } )
+        
+    </script>
+    
+</body>
+</html>

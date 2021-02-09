@@ -76,6 +76,7 @@
               </a>
             </div>
           </div>
+          <div class="excess"></div>
           <div class="main" style="text-align: center; margin-top: 10px;">
               <img style="width: 240px;" src="./img/hero.svg" alt="">
               <h1 style="margin: 20px;">Vuejs Navigation UI</h1>
@@ -103,10 +104,12 @@
     <script>
         const burger = document.querySelector('.toggle')
         const nav = document.querySelector('.links')
+        const container = document.querySelector('.container')
 
         burger.addEventListener('click', () => {
             burger.classList.toggle('open')
             nav.classList.toggle('open')
+            container.classList.toggle('open')
         })
 
         gsap.from('.main',1, {
